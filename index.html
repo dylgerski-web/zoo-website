@@ -250,14 +250,16 @@
            ============================================ */
         .hero {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 0;
-            gap: 40px;
+            align-items: stretch;
+            min-height: 500px;
         }
 
         .hero-text {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 5% 60px max(5%, calc((100vw - 1200px) / 2 + 5%));
         }
 
         .hero-text h1 {
@@ -279,13 +281,13 @@
 
         .hero-image {
             flex: 1;
-            text-align: center;
         }
 
         .hero-image img {
             width: 100%;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         /* ============================================
@@ -656,7 +658,16 @@
             .hero {
                 flex-direction: column;
                 text-align: center;
-                padding: 40px 0;
+                min-height: unset;
+            }
+
+            .hero-text {
+                padding: 40px 5%;
+            }
+
+            .hero-image {
+                width: 100%;
+                min-height: 300px;
             }
 
             .hero-text h1 {
@@ -813,21 +824,19 @@
 <!-- ============================================
      HERO SECTION
      ============================================ -->
-<div class="container">
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Най-добрите стоки за вашите любимци</h1>
-            <p>Всичко, от което се нуждаят вашите домашни любимци. Висококачествена храна, играчки и аксесоари.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn">Разгледайте продукти</a>
-                <a href="#" class="btn btn-outline">За нас</a>
-            </div>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Най-добрите стоки за вашите любимци</h1>
+        <p>Всичко, от което се нуждаят вашите домашни любимци. Висококачествена храна, играчки и аксесоари.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn">Разгледайте продукти</a>
+            <a href="#" class="btn btn-outline">За нас</a>
         </div>
-        <div class="hero-image">
-            <img src="images/hero-banner.png" alt="Кученце и котенце">
-        </div>
-    </section>
-</div>
+    </div>
+    <div class="hero-image">
+        <img src="images/hero-banner.png" alt="Кученце и котенце">
+    </div>
+</section>
 
 <!-- ============================================
      CATEGORIES SECTION
