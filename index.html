@@ -253,8 +253,8 @@
             min-height: 350px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            background: url('images/hero-banner.png') center bottom -50px/cover no-repeat;
+            justify-content: flex-start;
+            background: url('images/hero-banner.png') center bottom -640px / 100% auto no-repeat;
             width: 100%;
         }
 
@@ -268,9 +268,9 @@
         .hero-text {
             position: relative;
             z-index: 1;
-            max-width: 600px;
-            padding: 40px 5%;
-            text-align: center;
+            max-width: 800px;
+            padding: 40px 5% 40px max(5%, calc((100vw - 1200px) / 2 + 5%));
+            text-align: left;
         }
 
         .hero-text h1 {
@@ -288,7 +288,6 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         /* ============================================
